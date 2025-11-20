@@ -7,15 +7,19 @@ import {
   FormControl,
   InputLabel,
   OutlinedInput,
+  Box,
 } from "@mui/material";
 import { useState } from "react";
 import Visibility from "@mui/icons-material/Visibility";
 import VisibilityOff from "@mui/icons-material/VisibilityOff";
+import { useNavigate } from "react-router-dom";
+import '../css-stylesheet/LoginPage.css'
 
 function LoginForm() {
-    const [showPassword, setShowPassword] = useState(false);
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
+  const navigate = useNavigate()
+  const [showPassword, setShowPassword] = useState(false);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
 
   const handleClickShowPassword = () => setShowPassword((show) => !show);
 
@@ -32,22 +36,23 @@ function LoginForm() {
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault()
-    alert("Username:" + username)
-  }
+    event.preventDefault();
+    navigate('/ticket')
+  };
 
   return (
-        <form onSubmit={handleSubmit}>
-        <Stack direction="column" spacing={3}>
+    <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100%'}}>
+      <form onSubmit={handleSubmit}>
+      <Stack direction="column" spacing={3}>
         <h1>Log In</h1>
         <TextField
           value={username}
           id="username"
           label="Username"
           variant="outlined"
-          onInput={ e=> setUsername(e.target.value)}
+          onInput={(e) => setUsername(e.target.value)}
         ></TextField>
-        <FormControl sx={{ m: 1, width: "25ch" }} variant="outlined">
+        <FormControl sx={{ m: 1}} variant="outlined">
           <InputLabel htmlFor="outlined-adornment-password">
             Password
           </InputLabel>
@@ -71,15 +76,16 @@ function LoginForm() {
             }
             label="Password"
             value={password}
-            onInput={ e=> setPassword(e.target.value)}
+            onInput={(e) => setPassword(e.target.value)}
           />
         </FormControl>
-        <Button type="submit" variant="contained">Submit</Button>
-        </Stack>
-        </form>
-     
-    
-  );
+        <Button type="submit" variant="contained">
+          Submit
+        </Button>
+      </Stack>
+    </form>
+    </Box>
+      );
 }
 
 export default function LoginPage() {
