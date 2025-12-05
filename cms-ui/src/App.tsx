@@ -3,6 +3,7 @@ import './App.css'
 import LoginPage from './pages/LoginPage';
 import Layout from './components/Layout';
 import TicketHomePage from './pages/TicketHomePage';
+import TicketSubmitForm from './components/TIcketSubmitForm';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
         <Route path='ticket'>
           <Route element={<Layout/>}>
             <Route index element={<TicketHomePage/>}/>
+            <Route path='submit' element={<TicketSubmitForm/>}/>
           </Route>
         </Route>
       </Routes>

@@ -37,6 +37,11 @@ function LoginForm() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    //eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhMGVlYmM5OS05YzBiLTRlZjgtYmI2ZC02YmI5YmQzODBhMTEiLCJuYW1lIjoiSm9obiBTbWl0aCIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoiQ09OU1VNRVIiLCJ0ZW5hbnRfaWQiOiJiNWYxYTMwMi02MTM2LTRjNGYtYTkzMS0xODQ1MTEyZjQ2NDAiLCJleHAiOjE3MTEzNjUwMDAsImlhdCI6MTcxMTM2MTQwMH0.c_vB69BEELsWwbL-5RzevXvlsqSFx60x4H6r16hLR6I
+    //jwt for consumer
+    //eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjOTllZWJjMS0yYzBhLTRlZjgtYWE2ZC0xYmI5YmQzODBjMjIiLCJuYW1lIjoiQWdlbnQgU2FyYWgiLCJlbWFpbCI6InNhcmFoQGNtcy1zdXBwb3J0LmNvbSIsInJvbGUiOiJBR0VOVCIsInRlbmFudF9pZCI6bnVsbCwiZXhwIjoxNzExMzY1MDAwLCJpYXQiOjE3MTEzNjE0MDB9.nKBcEguo7L18XPQ_BuOPjBfTcAwLI0tMO0hZ1fRuQ-Q
+    //jwt for support agent
+    localStorage.setItem("access_token", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJhMGVlYmM5OS05YzBiLTRlZjgtYmI2ZC02YmI5YmQzODBhMTEiLCJuYW1lIjoiSm9obiBTbWl0aCIsImVtYWlsIjoiam9obkBnbWFpbC5jb20iLCJyb2xlIjoiQ09OU1VNRVIiLCJ0ZW5hbnRfaWQiOiJiNWYxYTMwMi02MTM2LTRjNGYtYTkzMS0xODQ1MTEyZjQ2NDAiLCJleHAiOjE3MTEzNjUwMDAsImlhdCI6MTcxMTM2MTQwMH0.c_vB69BEELsWwbL-5RzevXvlsqSFx60x4H6r16hLR6I")
     navigate('/ticket')
   };
 
